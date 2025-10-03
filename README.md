@@ -1,16 +1,89 @@
-# React + Vite
+# 🚀 Ilya Fredriksson - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En modern, responsiv portfolio-webbplats byggd med React och Framer Motion som visar mina färdigheter som systemutvecklare och frontend developer.
 
-Currently, two official plugins are available:
+## ✨ Funktioner
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🎨 Modern Design** - Elegant gradient-design med Framer Motion-animationer
+- **📱 Responsiv Layout** - Perfekt på alla enheter från mobil till desktop
+- **⚡ Snabb Prestanda** - Byggd med Vite för optimal laddningstid
+- **🎯 Interaktiva Projekt** - Showcase av verkliga projekt med live-demos
+- **📧 Kontaktformulär** - Direkt kontakt via EmailJS
+- **🏷️ Projektfiltrering** - Filtrera projekt efter kategori (Frontend/Fullstack)
 
-## React Compiler
+## 🛠 Teknisk Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19, JavaScript ES6+
+- **Animations**: Framer Motion
+- **Styling**: CSS3 med modern Flexbox/Grid
+- **Icons**: React Icons
+- **Build Tool**: Vite
+- **Deployment**: Netlify
 
-## Expanding the ESLint configuration
+## 🌟 Utvalda Projekt
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. QR Code Generator
+- Interaktiv QR-kod generator med stöd för olika datatyper
+- Anpassningsbara färger och storlekar
+- Nedladdning som PNG/SVG
+- **Tech**: React, QR.js, CSS3
+
+### 2. Crypto Tracker App  
+- Realtids kryptovaluta-spårare
+- CoinGecko API integration
+- Interaktiva diagram och favoriter
+- **Tech**: React, CoinGecko API, Chart.js
+
+## 🚀 Installation & Utveckling
+
+```bash
+# Klona repository
+git clone https://github.com/ilyafredriksson/Portfolio-React-JS.git
+
+# Navigera till projekt-mapp
+cd Portfolio-React-JS
+
+# Installera dependencies
+npm install
+
+# Starta utvecklingsserver
+npm run dev
+
+# Bygg för produktion  
+npm run build
+```
+
+## 📁 Projektstruktur
+
+```
+src/
+├── components/          # React komponenter
+│   ├── Navigation.jsx   # Huvudnavigation
+│   ├── Hero.jsx        # Hero-sektion
+│   ├── About.jsx       # Om mig-sektion
+│   ├── Skills.jsx      # Färdigheter
+│   ├── Projects.jsx    # Projekt-showcase
+│   └── Contact.jsx     # Kontaktformulär
+├── App.jsx             # Huvudkomponent
+└── main.jsx           # Entry point
+```
+
+## 🎯 Live Demo
+
+Besök den live versionen: [https://ilyafredriksson-portfolio.netlify.app](https://ilyafredriksson-portfolio.netlify.app)
+
+## 📞 Kontakt
+
+- **GitHub**: [ilyafredriksson](https://github.com/ilyafredriksson)
+- **LinkedIn**: [ilya-fredriksson](https://linkedin.com/in/ilya-fredriksson)
+- **Email**: ilya.fredriksson@example.com
+
+## 📄 Licens
+
+Detta projekt är öppet för alla som vill använda det som inspiration för sin egen portfolio.
+
+---
+
+**🎓 Skapad som en del av mina studier på Jensen Education - Systemutvecklare**
+
+*Söker för närvarande LIA-plats inom frontend/fullstack utveckling*

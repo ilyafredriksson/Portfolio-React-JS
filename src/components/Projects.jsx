@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt, FaReact, FaJsSquare, FaCss3Alt } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaReact, FaJsSquare, FaCss3Alt, FaStar } from 'react-icons/fa'
 import { SiTailwindcss, SiMongodb, SiExpress } from 'react-icons/si'
 import './Projects.css'
 
@@ -10,58 +10,85 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce React App',
-      description: 'En fullstack e-commerce applikation byggd med React, Node.js och MongoDB. Inkluderar användarautentisering, kundkorg och betalningsintegration.',
-      image: 'https://via.placeholder.com/400x250/667eea/ffffff?text=E-commerce+App',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      category: 'fullstack',
-      github: 'https://github.com/ilyafredriksson/ecommerce-app',
-      live: 'https://ecommerce-app-demo.netlify.app',
-      icons: [FaReact, SiExpress, SiMongodb]
+      title: 'QR Code Generator',
+      description: 'Interaktiv QR-kod generator byggd med React. Användare kan skapa QR-koder för URL:er, text, WiFi-lösenord och kontaktinfo. Inkluderar anpassningsbara färger, storlekar och nedladdning som PNG/SVG.',
+      image: 'https://via.placeholder.com/400x250/667eea/ffffff?text=QR+Code+Generator',
+      technologies: ['React', 'JavaScript', 'QR.js', 'CSS3'],
+      category: 'frontend',
+      github: 'https://github.com/ilyafredriksson/qr-code-generator',
+      live: 'https://qr-generator-ilya.netlify.app',
+      icons: [FaReact, FaJsSquare, FaCss3Alt],
+      featured: true
     },
     {
       id: 2,
-      title: 'Weather Dashboard',
-      description: 'Responsiv väderapplikation som hämtar data från externa APIs. Visar aktuellt väder, prognoser och interaktiva kartor.',
-      image: 'https://via.placeholder.com/400x250/764ba2/ffffff?text=Weather+Dashboard',
-      technologies: ['React', 'JavaScript', 'CSS3', 'API'],
+      title: 'Crypto Tracker App',
+      description: 'Realtids kryptovaluta-spårare med CoinGecko API. Visar aktuella priser, marknadskapitalisering, 24h förändringar och interaktiva diagram. Inkluderar sök- och favoritfunktioner med localStorage.',
+      image: 'https://via.placeholder.com/400x250/f59e0b/ffffff?text=Crypto+Tracker',
+      technologies: ['React', 'CoinGecko API', 'Chart.js', 'CSS3'],
       category: 'frontend',
-      github: 'https://github.com/ilyafredriksson/weather-dashboard',
-      live: 'https://weather-dashboard-if.netlify.app',
-      icons: [FaReact, FaJsSquare, FaCss3Alt]
+      github: 'https://github.com/ilyafredriksson/crypto-tracker',
+      live: 'https://crypto-tracker-ilya.netlify.app',
+      icons: [FaReact, FaJsSquare, FaCss3Alt],
+      featured: true
     },
     {
       id: 3,
-      title: 'Task Management System',
-      description: 'Projekthanteringsverktyg med drag-and-drop funktionalitet, teamsamarbete och realtidsuppdateringar.',
-      image: 'https://via.placeholder.com/400x250/9333ea/ffffff?text=Task+Manager',
-      technologies: ['React', 'Tailwind CSS', 'JavaScript'],
+      title: 'Portfolio Website',
+      description: 'Denna responsiva portfolio-webbplats byggd med React och Framer Motion. Inkluderar moderna animationer, kontaktformulär, projekt-showcase och optimerad prestanda för alla enheter.',
+      image: 'https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Portfolio+Site',
+      technologies: ['React', 'Framer Motion', 'CSS3', 'Responsive Design'],
       category: 'frontend',
-      github: 'https://github.com/ilyafredriksson/task-manager',
-      live: 'https://task-manager-if.netlify.app',
-      icons: [FaReact, SiTailwindcss, FaJsSquare]
+      github: 'https://github.com/ilyafredriksson/Portfolio-React-JS',
+      live: 'https://ilyafredriksson-portfolio.netlify.app',
+      icons: [FaReact, FaJsSquare, FaCss3Alt]
     },
     {
       id: 4,
-      title: 'Blog Platform',
-      description: 'Modern bloggplattform med CMS-funktionalitet, kommentarssystem och SEO-optimering.',
-      image: 'https://via.placeholder.com/400x250/0ea5e9/ffffff?text=Blog+Platform',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+      title: 'Weather Dashboard',
+      description: 'Responsiv väderapplikation som hämtar data från OpenWeatherMap API. Visar aktuellt väder, 5-dagars prognos, väderkartor och automatisk geolokalisering med modern UI.',
+      image: 'https://via.placeholder.com/400x250/06b6d4/ffffff?text=Weather+Dashboard',
+      technologies: ['React', 'Weather API', 'Geolocation', 'CSS3'],
+      category: 'frontend',
+      github: 'https://github.com/ilyafredriksson/weather-dashboard',
+      live: 'https://weather-app-ilya.netlify.app',
+      icons: [FaReact, FaJsSquare, FaCss3Alt]
+    },
+    {
+      id: 5,
+      title: 'Task Manager Pro',
+      description: 'Avancerat projekthanteringsverktyg med drag-and-drop Kanban board, kategorier, deadlines, progress tracking och localStorage för att spara uppgifter mellan sessioner.',
+      image: 'https://via.placeholder.com/400x250/10b981/ffffff?text=Task+Manager+Pro',
+      technologies: ['React', 'Drag & Drop', 'Local Storage', 'CSS Grid'],
+      category: 'frontend',
+      github: 'https://github.com/ilyafredriksson/task-manager-pro',
+      live: 'https://task-manager-ilya.netlify.app',
+      icons: [FaReact, FaJsSquare, FaCss3Alt]
+    },
+    {
+      id: 6,
+      title: 'E-commerce Store',
+      description: 'Fullstack e-commerce lösning med React frontend och Node.js backend. Inkluderar produktkatalog, kundkorg, användarautentisering, beställningshantering och Stripe betalningsintegration.',
+      image: 'https://via.placeholder.com/400x250/ef4444/ffffff?text=E-commerce+Store',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
       category: 'fullstack',
-      github: 'https://github.com/ilyafredriksson/blog-platform',
-      live: 'https://blog-platform-if.netlify.app',
+      github: 'https://github.com/ilyafredriksson/ecommerce-fullstack',
+      live: 'https://ecommerce-ilya.netlify.app',
       icons: [FaReact, SiExpress, SiMongodb]
     }
   ]
 
   const categories = [
     { key: 'all', label: 'Alla projekt' },
+    { key: 'featured', label: '⭐ Utvalda' },
     { key: 'frontend', label: 'Frontend' },
     { key: 'fullstack', label: 'Fullstack' }
   ]
 
   const filteredProjects = filter === 'all' 
     ? projects 
+    : filter === 'featured'
+    ? projects.filter(project => project.featured)
     : projects.filter(project => project.category === filter)
 
   const containerVariants = {
@@ -90,7 +117,8 @@ const Projects = () => {
         >
           <h2 className="section-title">Mina Projekt</h2>
           <p className="projects-description">
-            Här är några av de projekt jag arbetat med för att visa mina färdigheter inom webbutveckling
+            Utforska mina projekt som visar praktiska färdigheter inom React, API-integration och modern webbutveckling. 
+            Kolla särskilt in QR Code Generator och Crypto Tracker - mina utvalda projekt!
           </p>
         </motion.div>
 
@@ -123,10 +151,15 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <motion.div 
               key={project.id}
-              className="project-card"
+              className={`project-card ${project.featured ? 'featured' : ''}`}
               variants={itemVariants}
               whileHover={{ y: -10 }}
             >
+              {project.featured && (
+                <div className="featured-badge">
+                  <FaStar /> Utvalda
+                </div>
+              )}
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
@@ -168,6 +201,21 @@ const Projects = () => {
                     <span key={tech} className="tech-tag">{tech}</span>
                   ))}
                 </div>
+
+                {project.featured && (
+                  <div className="project-highlights">
+                    {project.id === 1 && (
+                      <div className="highlight-feature">
+                        🎯 Stöder flera QR-typer: URL, Text, WiFi, vCard
+                      </div>
+                    )}
+                    {project.id === 2 && (
+                      <div className="highlight-feature">
+                        📈 Live data från CoinGecko API med realtidsuppdateringar
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
