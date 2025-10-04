@@ -5,6 +5,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navigation from './components/Navigation'
+import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
+      <ScrollToTop />
     </div>
   )
 }

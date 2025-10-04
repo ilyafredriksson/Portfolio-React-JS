@@ -74,7 +74,8 @@ const Projects = () => {
       category: 'fullstack',
       github: 'https://github.com/ilyafredriksson/ecommerce-fullstack',
       live: 'https://ecommerce-ilya.netlify.app',
-      icons: [FaReact, SiExpress, SiMongodb]
+      icons: [FaReact, SiExpress, SiMongodb],
+      featured: true
     }
   ]
 
