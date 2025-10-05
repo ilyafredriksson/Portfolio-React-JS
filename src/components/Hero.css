@@ -1,7 +1,7 @@
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-  color: white;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+  color: #ffffff;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -10,7 +10,7 @@
   padding: 2rem;
 }
 
-/* Interactive Background */
+/* Interactive Security Background */
 .hero-bg {
   position: absolute;
   top: 0;
@@ -18,35 +18,101 @@
   right: 0;
   bottom: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
-.floating-shapes {
+/* Professionella geometriska former */
+.binary-rain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.binary-code {
+  position: absolute;
+  color: #4299e1;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  text-shadow: 0 0 8px rgba(66, 153, 225, 0.3);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Professionella tekniska termer */
+.security-elements {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.shape {
+.security-element {
   position: absolute;
-  border-radius: 50%;
-  opacity: 0.1;
+  color: #718096;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-shadow: none;
+  opacity: 0.2;
+  pointer-events: none;
 }
 
-.shape-1 { width: 80px; height: 80px; background: #667eea; top: 10%; left: 10%; }
-.shape-2 { width: 60px; height: 60px; background: #f093fb; top: 20%; right: 15%; }
-.shape-3 { width: 100px; height: 100px; background: #4facfe; bottom: 20%; left: 20%; }
-.shape-4 { width: 40px; height: 40px; background: #43e97b; top: 60%; left: 60%; }
-.shape-5 { width: 70px; height: 70px; background: #38ef7d; bottom: 30%; right: 20%; }
-.shape-6 { width: 90px; height: 90px; background: #667eea; top: 80%; right: 40%; }
+/* Nätverkslinjer */
+.network-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.network-line {
+  position: absolute;
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(45deg, transparent, #4299e1, transparent);
+  opacity: 0.15;
+  transform-origin: top;
+  pointer-events: none;
+}
+
+.network-line:nth-child(1) { top: 10%; left: 15%; transform: rotate(45deg); }
+.network-line:nth-child(2) { top: 20%; right: 20%; transform: rotate(-30deg); }
+.network-line:nth-child(3) { bottom: 30%; left: 25%; transform: rotate(60deg); }
+.network-line:nth-child(4) { bottom: 15%; right: 30%; transform: rotate(-45deg); }
+.network-line:nth-child(5) { top: 50%; left: 5%; transform: rotate(90deg); }
+.network-line:nth-child(6) { top: 60%; right: 10%; transform: rotate(15deg); }
+.network-line:nth-child(7) { bottom: 50%; left: 80%; transform: rotate(-60deg); }
+.network-line:nth-child(8) { top: 80%; right: 60%; transform: rotate(30deg); }
+
+/* Professionella element variationer */
+.security-element:nth-child(odd) {
+  color: #4299e1;
+  opacity: 0.25;
+}
+
+.security-element:nth-child(even) {
+  color: #718096;
+  opacity: 0.15;
+}
+
+/* Subtil mouse follower effekt */
+.mouse-follower svg {
+  opacity: 0.8;
+}
 
 .mouse-follower {
   position: fixed;
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.6) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(66, 153, 225, 0.4) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4299e1;
+  font-size: 0.8rem;
+  opacity: 0.6;
 }
 
 .hero-container {
@@ -64,19 +130,21 @@
   padding: 0;
 }
 
-/* Status Badge */
+/* Professional Status Badge */
 .status-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4299e1, #3182ce);
   padding: 0.75rem 1.5rem;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .status-icon {
@@ -85,20 +153,20 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: 3.2rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  line-height: 1.1;
-  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.2;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .name-highlight {
-  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #4facfe);
-  background-size: 300% 300%;
+  background: linear-gradient(135deg, #4299e1, #3182ce);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradientShift 4s ease-in-out infinite;
+  font-weight: 800;
 }
 
 @keyframes gradientShift {
@@ -149,14 +217,15 @@
   gap: 0.75rem;
   padding: 1rem 2rem;
   border: none;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .btn-icon {
@@ -164,10 +233,10 @@
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4299e1, #3182ce);
   color: white;
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-primary::before {

@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaDownload, FaCode, FaRocket, FaLightbulb } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaDownload, FaCode, FaRocket, FaLightbulb, FaLock, FaBug, FaShieldAlt } from 'react-icons/fa'
 import './Hero.css'
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [currentSkill, setCurrentSkill] = useState(0)
   
-  const skills = ['React', 'JavaScript', 'CSS3', 'Node.js', 'API:er', 'UI/UX']
+  const skills = ['React', 'TypeScript', 'Node.js', 'Next.js', 'AWS', 'MongoDB']
+  
+  // Professionella tekniska termer
+  const professionalElements = [
+    'TypeScript', 'React.js', 'Next.js', 'Node.js', 'REST API', 'GraphQL',
+    'CI/CD', 'Git', 'Docker', 'AWS', 'Azure', 'MongoDB', 'PostgreSQL',
+    'Agile', 'Scrum', 'TDD', 'Jest', 'Cypress', 'WebPack', 'Vite'
+  ]
+  
+  // Professionella kodelement
+  const codeElements = [
+    'function()', 'const', 'async/await', 'Promise', 'React.Component',
+    'useState()', 'useEffect()', 'API', 'JSON', 'HTML5', 'CSS3', 'ES6+'
+  ]
   
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -34,36 +47,96 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
-      {/* Interactive Background */}
+      {/* Interactive Security Background */}
       <div className="hero-bg">
-        <div className="floating-shapes">
-          {[...Array(6)].map((_, i) => (
+        {/* Kod animation */}
+        <div className="binary-rain">
+          {codeElements.map((code, i) => (
             <motion.div
-              key={i}
-              className={`shape shape-${i + 1}`}
-              animate={{
-                x: [0, 50, 0],
-                y: [0, -30, 0],
-                rotate: [0, 180, 360],
+              key={`code-${i}`}
+              className="binary-code"
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ 
+                y: window.innerHeight + 100, 
+                opacity: [0, 1, 1, 0] 
               }}
               transition={{
-                duration: 4 + i,
+                duration: 8 + Math.random() * 4,
                 repeat: Infinity,
+                delay: Math.random() * 5,
+                ease: "linear"
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                fontSize: `${0.8 + Math.random() * 0.4}rem`
+              }}
+            >
+              {code}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Professionella element som flyter */}
+        <div className="security-elements">
+          {professionalElements.map((element, i) => (
+            <motion.div
+              key={`professional-${i}`}
+              className="security-element"
+              initial={{ 
+                x: Math.random() * window.innerWidth,
+                y: Math.random() * window.innerHeight,
+                opacity: 0 
+              }}
+              animate={{
+                x: Math.random() * window.innerWidth,
+                y: Math.random() * window.innerHeight,
+                opacity: [0, 0.6, 0.3, 0.6, 0],
+                rotate: [0, 360]
+              }}
+              transition={{
+                duration: 15 + Math.random() * 10,
+                repeat: Infinity,
+                delay: Math.random() * 3,
+                ease: "easeInOut"
+              }}
+            >
+              {element}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Nätverkslinjer */}
+        <div className="network-lines">
+          {[...Array(8)].map((_, i) => (
+            <motion.div
+              key={`line-${i}`}
+              className="network-line"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ 
+                pathLength: [0, 1, 0],
+                opacity: [0, 0.4, 0]
+              }}
+              transition={{
+                duration: 6 + Math.random() * 4,
+                repeat: Infinity,
+                delay: Math.random() * 2,
                 ease: "easeInOut"
               }}
             />
           ))}
         </div>
         
-        {/* Mouse follower */}
+        {/* Mouse follower med säkerhetsikon */}
         <motion.div 
           className="mouse-follower"
           animate={{
-            x: mousePosition.x - 10,
-            y: mousePosition.y - 10,
+            x: mousePosition.x - 15,
+            y: mousePosition.y - 15,
           }}
           transition={{ type: "spring", stiffness: 500, damping: 28 }}
-        />
+        >
+          <FaShieldAlt />
+        </motion.div>
       </div>
 
       <div className="hero-container">
@@ -94,7 +167,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <span className="role">Systemutvecklare som älskar </span>
+            <span className="role">Fullstack utvecklare specialiserad på </span>
             <motion.span 
               key={currentSkill}
               className="skill-rotate"
@@ -113,9 +186,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Jag skapar moderna, interaktiva webbapplikationer som verkligen gör skillnad. 
-            Med passion för clean code och användarvänlig design är jag redo att bidra 
-            till ditt team genom min LIA-praktik.
+            Passionerad fullstack-utvecklare med stark grund inom modern webbutveckling. 
+            Jag skapar skalbar och användarvänlig kod med fokus på prestanda, säkerhet och 
+            bästa praxis. Erfaren inom React, Node.js och molnbaserade lösningar.
           </motion.p>
 
           <motion.div 
