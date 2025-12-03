@@ -1,66 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { 
-  FaShieldAlt, 
-  FaLock, 
-  FaBug, 
-  FaKey, 
-  FaCheckCircle,
-  FaUserSecret 
-} from 'react-icons/fa'
+import { FaCheckCircle, FaUserSecret, FaShieldAlt } from 'react-icons/fa'
+import { securitySkills } from '../../data/skills'
 import './SecuritySection.css'
 
 const SecuritySection = () => {
-  const securityExpertise = [
-    {
-      icon: FaShieldAlt,
-      title: 'OWASP Top 10',
-      description: 'Förståelse och implementation av OWASP Top 10 säkerhetsprinciper',
-      skills: [
-        'Injection prevention (SQL, NoSQL, XSS)',
-        'Broken Authentication mitigation',
-        'Sensitive Data Exposure protection',
-        'Security Misconfiguration prevention'
-      ],
-      color: '#10b981'
-    },
-    {
-      icon: FaLock,
-      title: 'Säker Autentisering',
-      description: 'Implementation av robust auth-system enligt best practices',
-      skills: [
-        'JWT med refresh token rotation',
-        'Bcrypt password hashing',
-        'Multi-factor authentication (MFA)',
-        'Session management'
-      ],
-      color: '#667eea'
-    },
-    {
-      icon: FaBug,
-      title: 'Input Validation & Sanitization',
-      description: 'Skydd mot malicious input och injection-attacker',
-      skills: [
-        'DOMPurify för XSS-skydd',
-        'Express-validator för backend',
-        'Schema validation med Joi',
-        'Content Security Policy (CSP)'
-      ],
-      color: '#f59e0b'
-    },
-    {
-      icon: FaKey,
-      title: 'API-säkerhet',
-      description: 'Säkra REST API:er med proper authentication och authorization',
-      skills: [
-        'Rate limiting (express-rate-limit)',
-        'CORS konfiguration',
-        'Helmet.js för HTTP headers',
-        'API key rotation'
-      ],
-      color: '#ef4444'
-    }
-  ]
 
   return (
     <section id="security" className="security-section">
@@ -82,7 +26,7 @@ const SecuritySection = () => {
         </motion.div>
 
         <div className="security-grid">
-          {securityExpertise.map((item, index) => (
+          {securitySkills.map((item, index) => (
             <motion.div
               key={item.title}
               className="security-card"

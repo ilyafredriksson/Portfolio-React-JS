@@ -38,9 +38,9 @@ export const skills = [
     category: 'frontend'
   },
   { 
-    name: 'JavaScript', 
+    name: 'JavaScript (ES6+)', 
     icon: FaJsSquare, 
-    level: 85, 
+    level: 90, 
     color: '#F7DF1E',
     category: 'frontend'
   },
@@ -61,28 +61,28 @@ export const skills = [
   { 
     name: 'Node.js', 
     icon: FaNodeJs, 
-    level: 75, 
+    level: 80, 
     color: '#339933',
     category: 'backend'
   },
   { 
-    name: 'Express', 
+    name: 'Express.js', 
     icon: SiExpress, 
-    level: 65, 
+    level: 75, 
     color: '#000000',
     category: 'backend'
   },
   { 
     name: 'MongoDB', 
     icon: SiMongodb, 
-    level: 60, 
+    level: 70, 
     color: '#47A248',
     category: 'backend'
   },
   { 
     name: 'Git', 
     icon: FaGitAlt, 
-    level: 80, 
+    level: 85, 
     color: '#F05032',
     category: 'tools'
   },
@@ -108,59 +108,59 @@ export const skills = [
 export const securitySkills = [
   {
     icon: FaShieldAlt,
-    title: 'OWASP Top 10',
-    description: 'Förståelse och implementation av OWASP Top 10 säkerhetsprinciper',
+    title: 'XSS Prevention',
+    description: 'Skydd mot Cross-Site Scripting attacker',
     skills: [
-      'Injection prevention (SQL, NoSQL, XSS)',
-      'Broken Authentication mitigation',
-      'Sensitive Data Exposure protection',
-      'Security Misconfiguration prevention',
-      'Cross-Site Scripting (XSS) defense',
-      'Insecure Deserialization protection'
+      'Input sanitization och validering',
+      'Output encoding',
+      'Content Security Policy (CSP)',
+      'DOMPurify implementation',
+      'Secure DOM manipulation',
+      'HTTP-only cookies'
+    ],
+    color: '#8b5cf6'
+  },
+  {
+    icon: FaLock,
+    title: 'CSRF Protection',
+    description: 'Skydd mot Cross-Site Request Forgery',
+    skills: [
+      'CSRF tokens implementation',
+      'SameSite cookie attribute',
+      'Double submit cookies',
+      'Origin header validation',
+      'Custom request headers',
+      'State-changing request protection'
+    ],
+    color: '#ec4899'
+  },
+  {
+    icon: FaKey,
+    title: 'Säker API Hantering',
+    description: 'Best practices för säker API-utveckling',
+    skills: [
+      'JWT authentication',
+      'Rate limiting',
+      'Input validation',
+      'CORS konfiguration',
+      'API versioning',
+      'Secure error handling'
     ],
     color: '#10b981'
   },
   {
-    icon: FaLock,
-    title: 'Säker Autentisering',
-    description: 'Implementation av robust auth-system enligt best practices',
-    skills: [
-      'JWT med refresh token rotation',
-      'Bcrypt password hashing',
-      'Multi-factor authentication (MFA)',
-      'Session management',
-      'OAuth 2.0 integration',
-      'Secure cookie handling'
-    ],
-    color: '#667eea'
-  },
-  {
     icon: FaBug,
-    title: 'Input Validation & Sanitization',
-    description: 'Skydd mot malicious input och injection-attacker',
+    title: 'HTTPS & Transport Security',
+    description: 'Säker datakommunikation och kryptering',
     skills: [
-      'DOMPurify för XSS-skydd',
-      'Express-validator för backend',
-      'Schema validation med Joi',
-      'Content Security Policy (CSP)',
-      'Output encoding',
-      'SQL/NoSQL injection prevention'
+      'TLS/SSL implementation',
+      'HSTS (HTTP Strict Transport Security)',
+      'Secure headers (Helmet.js)',
+      'Certificate management',
+      'Mixed content prevention',
+      'Secure WebSocket (WSS)'
     ],
     color: '#f59e0b'
-  },
-  {
-    icon: FaKey,
-    title: 'API-säkerhet',
-    description: 'Säkra REST API:er med proper authentication och authorization',
-    skills: [
-      'Rate limiting (express-rate-limit)',
-      'CORS konfiguration',
-      'Helmet.js för HTTP headers',
-      'API key rotation',
-      'Request validation',
-      'Error handling utan information leakage'
-    ],
-    color: '#ef4444'
   }
 ]
 
@@ -168,16 +168,14 @@ export const securitySkills = [
  * Additional competencies
  */
 export const additionalSkills = [
+  'UI/UX Design',
   'Responsive Design',
   'REST API Development',
-  'Agile/Scrum',
+  'Agile/Scrum metodologi',
+  'Jira projekthantering',
   'Component-Driven Development',
-  'Version Control (Git)',
+  'Git & GitHub',
   'Web Performance Optimization',
-  'SEO Best Practices',
-  'Accessibility (WCAG)',
-  'CI/CD Pipelines',
-  'Testing (Jest, React Testing Library)',
   'Chrome DevTools',
   'Problem Solving & Debugging'
 ]
