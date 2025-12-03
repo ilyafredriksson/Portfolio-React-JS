@@ -11,12 +11,11 @@ import {
   FaBug
 } from 'react-icons/fa'
 import { 
-  SiTypescript, 
-  SiTailwindcss, 
-  SiMongodb, 
-  SiExpress,
   SiJest,
-  SiVite
+  SiVite,
+  SiNextdotjs,
+  SiExpress,
+  SiMongodb
 } from 'react-icons/si'
 
 /**
@@ -53,10 +52,31 @@ export const skills = [
     category: 'frontend'
   },
   { 
+    name: 'Next.js', 
+    icon: SiNextdotjs, 
+    level: 75, 
+    color: '#000000',
+    category: 'frontend'
+  },
+  { 
     name: 'Node.js', 
     icon: FaNodeJs, 
     level: 75, 
     color: '#339933',
+    category: 'backend'
+  },
+  { 
+    name: 'Express', 
+    icon: SiExpress, 
+    level: 65, 
+    color: '#000000',
+    category: 'backend'
+  },
+  { 
+    name: 'MongoDB', 
+    icon: SiMongodb, 
+    level: 60, 
+    color: '#47A248',
     category: 'backend'
   },
   { 

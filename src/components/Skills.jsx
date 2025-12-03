@@ -1,22 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaReact, FaJsSquare, FaHtml5, FaCss3Alt, FaGitAlt, FaNodeJs } from 'react-icons/fa'
-import { SiTypescript, SiTailwindcss, SiMongodb, SiExpress } from 'react-icons/si'
+import { skills } from '../data/skills'
 import './Skills.css'
 
 const Skills = () => {
-  const skills = [
-    { name: 'React', icon: FaReact, level: 85, color: '#61DAFB' },
-    { name: 'JavaScript', icon: FaJsSquare, level: 90, color: '#F7DF1E' },
-    { name: 'HTML5', icon: FaHtml5, level: 95, color: '#E34F26' },
-    { name: 'CSS3', icon: FaCss3Alt, level: 90, color: '#1572B6' },
-    { name: 'TypeScript', icon: SiTypescript, level: 75, color: '#3178C6' },
-    { name: 'Tailwind CSS', icon: SiTailwindcss, level: 80, color: '#06B6D4' },
-    { name: 'Node.js', icon: FaNodeJs, level: 70, color: '#339933' },
-    { name: 'Express', icon: SiExpress, level: 65, color: '#000000' },
-    { name: 'MongoDB', icon: SiMongodb, level: 60, color: '#47A248' },
-    { name: 'Git', icon: FaGitAlt, level: 85, color: '#F05032' }
-  ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
