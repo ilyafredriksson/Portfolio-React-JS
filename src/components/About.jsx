@@ -22,9 +22,9 @@ const About = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                Jag är en driven systemutvecklare med passion för frontend-utveckling och modern webbteknik. 
-                Genom mina studier på Jensen Education har jag byggt upp en solid grund inom programmering 
-                och utvecklat särskild expertis inom React, JavaScript och responsiv design.
+                Jag är en passionerad frontend-utvecklare med specialisering i webbsäkerhet. 
+                Med gedigen kunskap i HTML, CSS, JavaScript, React och Node.js skapar jag moderna 
+                webbapplikationer som kombinerar elegant design med robust säkerhet.
               </motion.p>
               
               <motion.p
@@ -33,9 +33,9 @@ const About = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Min bakgrund inom servicebranschen har gett mig starka kommunikationsförmågor och 
-                problemlösningskapacitet som jag nu applicerar inom utveckling. Jag tror på att 
-                kombinera teknisk expertis med användarfokus för att skapa meningsfulla digitala upplevelser.
+                Min styrka ligger i att utveckla användarvänliga gränssnitt med säkerhet som prioritet. 
+                Jag följer branschens bästa metoder och håller mig ständigt uppdaterad med nya 
+                teknologier och säkerhetsstandarder som OWASP Top 10.
               </motion.p>
 
               <motion.p
@@ -44,8 +44,8 @@ const About = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                Just nu söker jag en LIA-plats där jag kan bidra med min entusiasm och färdigheter 
-                samtidigt som jag fortsätter utvecklas som professionell utvecklare.
+                Jag söker nu en utmanande roll där jag kan bidra med mina kunskaper och 
+                samtidigt växa som utvecklare i ett dynamiskt team.
               </motion.p>
             </div>
 
