@@ -8,19 +8,19 @@ export const contactInfo = [
   {
     icon: FaPhone,
     label: 'Telefon',
-    value: '+46 70 123 45 67',
-    href: 'tel:+46701234567'
+    value: '+46 72 7151053',
+    href: 'tel:+46727151053'
   },
   {
     icon: FaEnvelope,
     label: 'Email',
-    value: 'ilya.fredriksson@example.com',
-    href: 'mailto:ilya.fredriksson@example.com'
+    value: 'fredrikssonilya@gmail.com',
+    href: 'mailto:fredrikssonilya@gmail.com'
   },
   {
     icon: FaMapMarkerAlt,
     label: 'Plats',
-    value: 'Stockholm, Sverige',
+    value: 'Stockholm',
     href: '#'
   }
 ]

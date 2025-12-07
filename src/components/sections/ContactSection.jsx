@@ -71,7 +71,7 @@ const ContactSection = () => {
         >
           <h2 className="section-title">Kontakta mig</h2>
           <p className="section-subtitle">
-            Intresserad av att diskutera LIA-möjligheter eller samarbeten? Hör gärna av dig!
+            Intresserad av att diskutera möjligheter eller samarbeten? Hör gärna av dig!
           </p>
         </motion.div>
 

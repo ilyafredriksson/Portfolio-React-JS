@@ -8,6 +8,7 @@ import ContactSection from './components/sections/ContactSection'
 import Navigation from './components/Navigation'
 import ScrollToTop from './components/ScrollToTop'
 import ErrorBoundary from './components/common/ErrorBoundary'
+
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <SecuritySection />
         <Projects />
         <ContactSection />
+       
         <ScrollToTop />
       </div>
     </ErrorBoundary>
