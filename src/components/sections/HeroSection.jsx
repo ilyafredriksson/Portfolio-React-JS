@@ -209,7 +209,7 @@ const HeroSection = () => {
               <FaGithub />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/ilya-fredriksson"
+              href="https://www.linkedin.com/in/ilya-fredriksson-197313353/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -3 }}

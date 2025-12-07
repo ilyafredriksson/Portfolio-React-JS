@@ -186,7 +186,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Passionerad fullstack-utvecklare med stark grund inom modern webbutveckling. 
+            Passionerad Frontend/Fullstack-utvecklare med stark grund inom modern webbutveckling. 
             Jag skapar skalbar och användarvänlig kod med fokus på prestanda, säkerhet och 
             bästa praxis. Erfaren inom React, Node.js och molnbaserade lösningar.
           </motion.p>
@@ -236,7 +236,7 @@ const Hero = () => {
               <span className="social-tooltip">GitHub</span>
             </motion.a>
             <motion.a 
-              href="https://linkedin.com/in/ilya-fredriksson"
+              href="https://www.linkedin.com/in/ilya-fredriksson-197313353/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link linkedin"
