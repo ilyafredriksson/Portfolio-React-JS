@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaCheckCircle, FaUserSecret, FaShieldAlt } from 'react-icons/fa'
 import { securitySkills } from '../../data/skills'
+import Security3DScene from '../3d/Security3DScene'
 import './SecuritySection.css'
 
 const SecuritySection = () => {
+  const [show3D, setShow3D] = useState(true)
 
   return (
     <section id="security" className="security-section">
@@ -22,8 +24,35 @@ const SecuritySection = () => {
               Som frontend-utvecklare med fokus på säkerhet implementerar jag OWASP-standarder 
               och best practices i varje projekt för att skydda användare och data.
             </p>
+            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+              <button 
+                onClick={() => setShow3D(!show3D)}
+                style={{
+                  padding: '0.75rem 2rem',
+                  background: show3D ? 'linear-gradient(135deg, #00d4ff 0%, #0099cc 100%)' : '#333',
+                  color: 'white',
+                  border: '2px solid #00d4ff',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontWeight: '600',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                {show3D ? '3D Säkerhetsvy Aktiv' : 'Visa 3D Säkerhetsvy'}
+              </button>
+            </div>
           </div>
         </motion.div>
+
+        {show3D && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Security3DScene />
+          </motion.div>
+        )}
 
         <div className="security-grid">
           {securitySkills.map((item, index) => (

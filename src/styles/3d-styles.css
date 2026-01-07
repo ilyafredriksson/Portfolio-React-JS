@@ -1,0 +1,252 @@
+/* ===========================================
+   3D PORTFOLIO STYLES
+   =========================================== */
+
+/* 3D Canvas Styles */
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  outline: none;
+  touch-action: none;
+  border-radius: 16px;
+}
+
+/* 3D Card Enhancements */
+.projects-grid-3d {
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+/* Skills 3D Container */
+.skills-3d-container {
+  margin: 3rem 0;
+  position: relative;
+  min-height: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Smooth transitions for 3D elements */
+.skill-orb,
+.project-card-3d {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Loading state for 3D content */
+.loading-3d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+/* View toggle buttons */
+.view-toggle-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+  flex-wrap: wrap;
+}
+
+.view-toggle-btn {
+  padding: 1rem 2.5rem;
+  background: rgba(26, 26, 46, 0.8);
+  color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.view-toggle-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.view-toggle-btn:hover::before {
+  left: 100%;
+}
+
+.view-toggle-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 10px 30px rgba(0, 212, 255, 0.3),
+    0 0 20px rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+.view-toggle-btn.active {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  border-color: #00d4ff;
+  box-shadow: 
+    0 15px 40px rgba(0, 212, 255, 0.4),
+    0 0 30px rgba(0, 212, 255, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.view-toggle-btn.active::before {
+  display: none;
+}
+
+/* Glass morphism effects for 3D elements */
+.glass-effect {
+  background: rgba(26, 26, 46, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Neon glow effects */
+.neon-glow {
+  position: relative;
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 10px rgba(0, 212, 255, 0.5),
+      0 0 20px rgba(0, 212, 255, 0.3),
+      0 0 30px rgba(0, 212, 255, 0.2),
+      0 0 40px rgba(0, 212, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 15px rgba(0, 212, 255, 0.7),
+      0 0 30px rgba(0, 212, 255, 0.5),
+      0 0 45px rgba(0, 212, 255, 0.3),
+      0 0 60px rgba(0, 212, 255, 0.2);
+  }
+}
+
+/* 3D Scene container styling */
+.scene-3d-container {
+  margin: 3rem auto;
+  max-width: 1400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Floating animation for 3D elements */
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateX(5deg);
+  }
+}
+
+.floating-3d {
+  animation: float3D 4s ease-in-out infinite;
+}
+
+/* Loading spinner for 3D scenes */
+.loading-3d::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(0, 212, 255, 0.2);
+  border-top-color: #00d4ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+
+@media (max-width: 1200px) {
+  .skills-3d-container,
+  .projects-grid-3d,
+  .scene-3d-container {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-3d-container,
+  .projects-grid-3d,
+  .scene-3d-container {
+    min-height: 400px;
+  }
+  
+  .view-toggle-btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  .view-toggle-container {
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-3d-container,
+  .projects-grid-3d,
+  .scene-3d-container {
+    min-height: 350px;
+  }
+
+  .view-toggle-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ===========================================
+   ACCESSIBILITY
+   =========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  canvas,
+  .floating-3d,
+  .neon-glow {
+    animation: none !important;
+  }
+  
+  .view-toggle-btn::before {
+    display: none;
+  }
+}

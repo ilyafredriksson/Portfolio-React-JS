@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { skills } from '../data/skills'
+import Skills3D from './3d/Skills3D'
 import './Skills.css'
 
 const Skills = () => {
+  const [view3D, setView3D] = useState(true)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -33,9 +35,40 @@ const Skills = () => {
           <p className="skills-description">
             Här är de teknologier och verktyg jag arbetar med för att skapa moderna webbapplikationer
           </p>
+          <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+            <button 
+              onClick={() => setView3D(true)} 
+              style={{
+                padding: '0.5rem 1.5rem',
+                backgroundColor: view3D ? '#00d4ff' : '#333',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer'
+              }}
+            >
+              3D Vy
+            </button>
+            <button 
+              onClick={() => setView3D(false)}
+              style={{
+                padding: '0.5rem 1.5rem',
+                backgroundColor: !view3D ? '#00d4ff' : '#333',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer'
+              }}
+            >
+              Grid Vy
+            </button>
+          </div>
         </motion.div>
 
-        <motion.div 
+        {view3D ? (
+          <Skills3D skills={skills} />
+        ) : (
+          <motion.div 
           className="skills-grid"
           variants={containerVariants}
           initial="hidden"
@@ -76,6 +109,7 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+        )}
 
         <motion.div 
           className="skills-additional"

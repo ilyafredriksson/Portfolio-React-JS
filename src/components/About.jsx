@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaCode, FaGraduationCap, FaHeart } from 'react-icons/fa'
+import About3DScene from './3d/About3DScene'
 import './About.css'
 
 const About = () => {
+  const [show3D, setShow3D] = useState(true)
+  
   return (
     <section id="about" className="about">
       <div className="container">
@@ -14,6 +17,26 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h2 className="section-title">Om mig</h2>
+          <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
+            <button 
+              onClick={() => setShow3D(!show3D)}
+              style={{
+                padding: '0.75rem 2rem',
+                background: show3D ? 'linear-gradient(135deg, #00d4ff 0%, #0099cc 100%)' : '#333',
+                color: 'white',
+                border: '2px solid #00d4ff',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontWeight: '600',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              {show3D ? '3D Vy Aktiv' : 'Visa 3D'}
+            </button>
+          </div>
+          
+          {show3D && <About3DScene />}
+          
           <div className="about-content">
             <div className="about-text">
               <motion.p

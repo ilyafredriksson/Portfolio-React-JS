@@ -8,6 +8,7 @@ import ContactSection from './components/sections/ContactSection'
 import Navigation from './components/Navigation'
 import ScrollToTop from './components/ScrollToTop'
 import ErrorBoundary from './components/common/ErrorBoundary'
+import Interactive3DParticles from './components/3d/Interactive3DParticles'
 
 import './App.css'
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="App">
+        <Interactive3DParticles />
         <Navigation />
         <HeroSection />
         <About />

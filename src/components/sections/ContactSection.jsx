@@ -4,11 +4,13 @@ import { FaCheckCircle, FaExclamationCircle, FaPaperPlane } from 'react-icons/fa
 import { useForm } from '../../hooks/useForm'
 import { checkRateLimit } from '../../utils/validation'
 import { contactInfo, socialLinks, whyContactMe } from '../../data/contact'
+import Contact3DScene from '../3d/Contact3DScene'
 import emailjs from 'emailjs-com'
 import './ContactSection.css'
 
 const ContactSection = () => {
   const [submitStatus, setSubmitStatus] = useState(null)
+  const [show3D, setShow3D] = useState(true)
 
   const initialValues = {
     name: '',
@@ -73,7 +75,34 @@ const ContactSection = () => {
           <p className="section-subtitle">
             Intresserad av att diskutera möjligheter eller samarbeten? Hör gärna av dig!
           </p>
+          <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+            <button 
+              onClick={() => setShow3D(!show3D)}
+              style={{
+                padding: '0.75rem 2rem',
+                background: show3D ? 'linear-gradient(135deg, #00d4ff 0%, #0099cc 100%)' : '#333',
+                color: 'white',
+                border: '2px solid #00d4ff',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontWeight: '600',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              {show3D ? '3D Kontaktvy Aktiv' : 'Visa 3D Kontaktvy'}
+            </button>
+          </div>
         </motion.div>
+
+        {show3D && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Contact3DScene />
+          </motion.div>
+        )}
 
         <div className="contact-content">
           {/* Contact Info */}

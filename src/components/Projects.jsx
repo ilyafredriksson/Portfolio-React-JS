@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaExternalLinkAlt, FaShieldAlt, FaStar } from 'react-icons/fa'
 import { projects, projectCategories, getProjectsByCategory } from '../data/projects'
+import Project3DCard from './3d/Project3DCard'
 import './Projects.css'
 
 const Projects = () => {
   const [filter, setFilter] = useState('all')
+  const [view3D, setView3D] = useState(false)
 
   const filteredProjects = getProjectsByCategory(filter)
 
@@ -37,6 +39,34 @@ const Projects = () => {
           <p className="projects-description">
             Utforska mina projekt som visar praktiska färdigheter inom React, API-integration och modern webbutveckling.
           </p>
+          <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+            <button 
+              onClick={() => setView3D(true)} 
+              style={{
+                padding: '0.5rem 1.5rem',
+                backgroundColor: view3D ? '#00d4ff' : '#333',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer'
+              }}
+            >
+              3D Vy
+            </button>
+            <button 
+              onClick={() => setView3D(false)}
+              style={{
+                padding: '0.5rem 1.5rem',
+                backgroundColor: !view3D ? '#00d4ff' : '#333',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer'
+              }}
+            >
+              Grid Vy
+            </button>
+          </div>
         </motion.div>
 
         <motion.div 
@@ -58,7 +88,29 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        <motion.div 
+        {view3D ? (
+          <motion.div 
+            className="projects-grid-3d"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            key={filter}
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+              gap: '2rem',
+              marginTop: '3rem'
+            }}
+          >
+            {filteredProjects.map((project, index) => (
+              <motion.div key={project.id} variants={itemVariants}>
+                <Project3DCard project={project} index={index} />
+              </motion.div>
+            ))}
+          </motion.div>
+        ) : (
+          <motion.div 
           className="projects-grid"
           variants={containerVariants}
           initial="hidden"
@@ -148,6 +200,7 @@ const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
+        )}
       </div>
     </section>
   )

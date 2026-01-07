@@ -9,6 +9,7 @@ import {
   FaRocket, 
   FaArrowDown 
 } from 'react-icons/fa'
+import Hero3DBackground from '../3d/Hero3DBackground'
 import './HeroSection.css'
 
 const HeroSection = () => {
@@ -47,48 +48,8 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="hero-section">
-      {/* Animated Background */}
-      <div className="hero-bg">
-        <motion.div 
-          className="gradient-orb orb-1"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="gradient-orb orb-2"
-          animate={{
-            x: [0, -80, 0],
-            y: [0, 80, 0],
-            scale: [1, 0.8, 1]
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="gradient-orb orb-3"
-          animate={{
-            x: [0, 60, 0],
-            y: [0, -60, 0],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
+      {/* 3D Background */}
+      <Hero3DBackground />
 
       <div className="hero-container">
         {/* Hero Content */}
